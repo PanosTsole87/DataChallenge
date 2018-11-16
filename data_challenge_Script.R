@@ -105,6 +105,8 @@ mosaicplot(table(clean_d$smoke, clean_d$water_fluor))
 
 mosaicplot(table(clean_d$typ2_diabetes, clean_d$water_fluor))
 
+# Write clean_d
+write.csv(clean_d, "clean_d.csv", row.names = F)
 ############### Data transformations ####################
 # Create a new df
 trans_d = clean_d
@@ -145,3 +147,5 @@ nrow(trans_d[trans_d$gumd_binary == 1 & trans_d$probing_depth< 3, ]) # 127
 # How many are recorded as having gum disease but have p depth less than 3mm
 nrow(trans_d[trans_d$gumd_binary == 1 & trans_d$tp_fluoride < 1000, ]) # 0
 
+# Save trans_d
+write.csv(trans_d, "trans_d.csv", row.names = F)

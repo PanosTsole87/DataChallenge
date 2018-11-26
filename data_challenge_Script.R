@@ -149,3 +149,5 @@ nrow(trans_d[trans_d$gumd_binary == 1 & trans_d$tp_fluoride < 1000, ]) # 0
 
 # Save trans_d
 write.csv(trans_d, "trans_d.csv", row.names = F)
+
+

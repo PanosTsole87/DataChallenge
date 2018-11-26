@@ -252,3 +252,12 @@ summary(stepwise_reg)
 subsets(stepwise_reg, statistic = 'rsq')
 
 # Stepwise regression leads to the same final output - All variables are statistically significant except water_fluor
+
+# Stepwise Model 2
+stepwise_reg2 = regsubsets(gumd_binary ~ age + n.fillings + BMI + Flmins + alcohol + mouthwash + smoke + typ2_diabetes + water_fluor + sex, data = model_d, nbest = 1) # Find only the best of each variable-number category
+
+summary(stepwise_reg2)
+
+subsets(stepwise_reg2, statistic = 'rsq')
+
+# Stepwise regression leads to the same final output - All variables are statistically significant except water_fluor
